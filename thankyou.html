@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed | Aditya Kirana Store</title>
+      <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+               max-width: 500px;
+   width: 75%;
+
+        }
+        .checkmark {
+            color: #4CAF50; /* Green Color */
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        h1 { color: #333; margin-bottom: 10px; }
+        p { color: #666;font-size: clamp(12px, 4vw, 18px); margin-bottom: 30px; line-height: 1.3;}
+        
+        .home-btn {
+            background-color: #ff9900; /* Amazon type orange */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Link ke liye */
+                    -webkit-tap-highlight-color: transparent;
+
+        }
+        .home-btn:hover { background-color: #e68a00; }
+        .thankyouName{
+            color: black;
+        }
+        span{
+            color:#e50914;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="card">
+        <div class="checkmark">✓</div> 
+        
+        <h1 id="titleText">Order Placed!</h1>
+        <p id="descText">Thank you <strong class="thankyouName"></strong> for shopping with <span>Aditya Kirana Store</span>. Your order will be delivered soon.</p>
+        
+       <a href="index.html" class="home-btn" id="homeBtn">Continue Shopping</a>
+
+    </div>
+<script>
+  if (!sessionStorage.getItem("orderDone")) {
+  window.location.href = "index.html";
+} else {
+  // page successfully opened once
+  sessionStorage.removeItem("orderDone");
+}
+
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+
+const titleText = document.getElementById("titleText");
+const descText = document.getElementById("descText");
+const homeBtn = document.getElementById("homeBtn");
+
+// Name logic (same as tumhara)
+const savedName = localStorage.getItem("customerName");
+document.querySelector(".thankyouName").textContent = savedName || "Customer";
+
+// 🔥 WhatsApp mode
+if (type === "whatsapp") {
+  titleText.textContent = "Order Sent on WhatsApp";
+  descText.innerHTML = `
+    Thank you! Please make sure you have sent the message on WhatsApp.
+    We will contact you once the order is confirmed.
+  `;
+}
+
+// Cart clear jab thankyou page open ho
+localStorage.removeItem("cart");
+localStorage.removeItem("customerName");
+
+</script>
+</body>
+</html>

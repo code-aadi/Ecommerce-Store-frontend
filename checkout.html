@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Aditya Kirana Store</title>
+      <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+#login-section{
+  margin-bottom: clamp(1rem, 2vw + 0.5rem, 3rem);
+}
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: rgb(247, 255, 251);
+       min-height: 100vh;
+       margin: 0;
+       padding: 0;
+    }
+
+    #phone-img {
+        width: 25px;
+        top: 46%;
+        left: 6%;
+    }
+
+    #logo {
+        margin: auto;
+        display: block;
+        width: 480px;
+    }
+
+    #mobile-step {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        width: 420px;
+        box-shadow: 0 24px 50px #00000026;
+        border: 1px solid #E0E0E0;
+        margin: auto;
+        position: relative;
+        border-radius: 5px;
+
+    }
+
+    #login-heading {
+        font-weight: 800;
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+
+    label {
+
+        font-size: .8rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    #mobile-input {
+        height: 2rem;
+        padding: 0.375rem 2.3rem;
+        font-size: 1rem;
+        width: 82%;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        outline: none;
+        background-image: url('phone-call-svgrepo-com.svg');
+        background-position: 6px;
+        background-repeat: no-repeat;
+        background-size: 18px;
+
+
+    }
+
+    #phone-img {
+        position: absolute;
+    }
+
+    #proceed {
+        width: 100%;
+        padding: .5rem;
+        background-color: #e50914;
+        font-size: 20px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 3rem;
+        font-size: clamp(12px, 5vw, 20px);
+        -webkit-tap-highlight-color: transparent;
+
+    }
+
+    #notice {
+        font-size: 80%;
+        font-weight: 400;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        line-height: 20px;
+
+    }
+
+    #mobile-input:focus {
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+        border-color: #e50914;
+    }
+
+    #proceed:hover {
+        background: #cb0d16;
+    }
+    /* location form css */
+    .page{
+      min-height:100vh;
+     display: flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      display: none;
+
+    }
+
+    .address-card{
+      width:100%;
+      max-width:800px;
+      background:#fff;
+      border-radius:14px;
+     padding: 24px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+    .address-card,
+.address-card *{
+    box-sizing: border-box;
+}
+
+
+    .address-card h2{
+      margin:0 0 6px;
+      font-size:22px;
+    }
+
+    .address-card p{
+      margin:0 0 20px;
+      font-size:14px;
+      color:#555;
+    }
+
+    .form-group{
+    
+        margin-bottom: 16px;
+    }
+
+    .form-group label{
+      display:block;
+      font-size:13px;
+      margin-bottom:6px;
+      color:#333;
+    }
+
+    .form-group input,
+    .form-group select{
+      width:100%;
+      height:44px;
+      padding:0 12px;
+      font-size:15px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      outline:none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus{
+      border-color:#e50914;;
+      box-shadow:0 0 0 2px rgba(79,70,229,0.2);
+    }
+
+    .row{
+      display:flex;
+      gap:12px;
+      
+    }
+
+    .row .form-group{
+      flex:1;
+    }
+
+    .placeOrderBtn{
+      width:100%;
+      height:46px;
+      margin-top:10px;
+      border:none;
+      border-radius:10px;
+      background:#e50914;;
+      color:#fff;
+      font-size:16px;
+      cursor:pointer;
+              -webkit-tap-highlight-color: transparent;
+    }
+
+    .placeOrderBtn:hover{
+      background:#cb0d16;
+    }
+
+    .note{
+      margin-top:12px;
+      font-size:12px;
+      color:#777;
+      text-align:center;
+    }
+    /*-----*/
+
+      /* otp wala */
+    #otp-step {
+        max-width: 320px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: none;
+        /* alert ke baad show karna */
+    }
+
+    #otp-step label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    #otp-input {
+        width: 92%;
+        height: 42px;
+        padding: 0 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        margin-bottom: 15px;
+    }
+
+    #otp-input:focus {
+        border-color: #e50914;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    }
+
+    #verify-btn {
+        width: 100%;
+        height: 42px;
+        border: none;
+        border-radius: 6px;
+        background: #e50914;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+
+    }
+
+    #verify-btn:hover {
+        background: #cb0d16;
+    }
+
+    #otp-input::-webkit-inner-spin-button,
+    #otp-input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .resend {
+        font-size: 100%;
+        font-weight: 400;
+        text-align: center;
+        color: #e50914;
+        cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+
+    }
+  
+/* payement method wala dummy */
+/* Overlay */
+.payment-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+/* Modal */
+.payment-modal{
+  background:#fff;
+  width:100%;
+  max-width:360px;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+  animation:pop .25s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.payment-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.payment-header h3{
+  margin:0;
+  font-size:18px;
+}
+
+.close-btn{
+  cursor:pointer;
+  font-size:18px;
+}
+
+.amount{
+  font-size:22px;
+  font-weight:700;
+  margin:10px 0 16px;
+}
+
+.method{
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:12px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.method input{accent-color:#e50914}
+
+.pay-btn{
+  width:100%;
+  height:44px;
+  border:none;
+  border-radius:10px;
+  background:#e50914;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:10px;
+          -webkit-tap-highlight-color: transparent;
+
+}
+
+.pay-btn:hover{background:#cb0d16}
+
+.loader{
+  display:none;
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+}
+
+
+    .success-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.8rem 2.2rem;
+        max-width: 420px;
+  width: 75%;
+  margin: auto;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.28);
+      text-align: center;
+     
+      overflow: hidden;
+      animation: fadeIn 0.8s ease-out;
+      display: none;
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+   
+      
+    }
+
+    .success-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, #28a745, #34d058);
+    }
+
+    .icon {
+          font-size: clamp(60px, 5vw, 96px);
+      color: #28a745;
+      margin-bottom: 1rem;
+      animation: popIn 1s ease;
+    }
+
+    h1 {
+      color: #111;
+           font-size: clamp(1.5rem,5vw, 2.3rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .store-name {
+      color: #e50914; /* Red accent for kirana feel */
+      font-size:clamp(1rem, 5vw, 1.7rem);
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+    }
+
+    .welcome {
+      color: #444;
+      font-size: clamp(12px, 5vw, 18px);
+      line-height: 1.6;
+      margin-bottom: 2.4rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 1.1rem 2.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(14px, 3vw, 18px);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #218838;
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
+    }
+
+    .footer {
+      margin-top: 2.2rem;
+      font-size: clamp(14px, 3vw, 18px);
+      color: #666;
+    }
+    .back-btn img{
+      width: clamp(13px, 3vw, 20px);
+      transform: rotate(-90deg);
+    }
+    .back-btn{
+      display: flex;
+      gap: 10px;
+      box-shadow: 0 24px 50px #00000026;
+    padding: .5rem 1.5rem;
+    border-radius: 1000px;
+    border: 1px solid #E0E0E0;
+    align-items: center;
+    transition: all .3s;
+    background-color: white;
+    margin: auto;
+    font-size: clamp(13px, 3vw, 18px);
+    }
+    .body{
+      background-color: rgb(125, 125, 239);
+    }
+    .back-btn:hover{
+      background-color: aliceblue;
+    }
+    #loader-main {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+   background: rgb(247, 255, 251);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #bf2930; /* Aapki theme ka red color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0%   { transform: scale(0.5); opacity: 0; }
+      60%  { transform: scale(1.15); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @media screen and (max-width:600px) {
+       
+
+        #logo {
+            width: 100%;
+        }
+
+        #mobile-input {
+            width: 100%;
+            height: 2.5rem;
+            padding: 0px 0px 0px 29px;
+            box-sizing: border-box;
+        }
+
+        #proceed {
+
+            width: 70%;
+            align-self: center;
+        }
+        #mobile-step{
+          width: 80%;
+        }
+
+        #notice {
+            line-height: 13px;
+            font-size: 11px;
+        }
+      
+    }
+   
+    
+
+  
+</style>
+
+<body>
+  <div id="loader-main"><div class="spinner"></div></div>
+    <section id="login-section">
+        <img id="logo" src="adityalogo-removebg-preview.png" alt="">
+        <div id="mobile-step">
+            <h2 id="login-heading">Login</h2>
+            <label for="mobileNumber">Enter your mobile number</label>
+            <input id="mobile-input" type="text">
+            <button id="proceed">Proceed</button>
+
+            <p id="notice">By continuing, you agree to Aditya kirana Stores's
+                Conditions of Use and Privacy Notice.</p>
+        </div>
+        <div id="otp-step">
+            <label for="otpInput">Enter the OTP sent to you</label>
+            <input id="otp-input" type="number" placeholder="Enter OTP">
+            <button id="verify-btn">Verify OTP</button>
+            <p class="resend">Resend OTP</p>
+        </div>
+
+    </section>
+<button class="back-btn"><img src="up-arrow.png" alt=""><span>Back</span></button>
+     <div class="page">
+    <div class="address-card">
+      <h2>Add a new address</h2>
+      <p>Enter your delivery address details</p>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" class="userName">
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="10-digit mobile number" class="userMobileNumber">
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="text" placeholder="Pincode" class="userPincode">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" placeholder="City" class="userCity">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>State</label>
+        <select id="state-select">
+          <option value="">Select State</option>
+          
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>House No, Building Name</label>
+        <input type="text" placeholder="House no / Building" class="userhouseBuilding">
+      </div>
+
+      <div class="form-group">
+        <label>Area, Street, Sector</label>
+        <input type="text" placeholder="Area, street, sector" class="userArea">
+      </div>
+
+      <div class="form-group">
+        <label>Landmark (Optional)</label>
+        <input type="text" placeholder="Nearby landmark" class="userLandMark">
+      </div>
+ <div class="payment-options">
+    <h3>Payment Method</h3>
+    
+    <div>
+        <input type="radio" id="cod" name="payment-mode" value="cod">
+        <label for="cod">Cash on Delivery</label>
+    </div>
+
+    <div>
+        <input type="radio" id="online" name="payment-mode" value="online">
+        <label for="online">Pay Online / UPI</label>
+    </div>
+</div>
+      <button class="placeOrderBtn">Place Order</button>
+
+      <div class="note">
+        Your address will be used only for delivery purposes
+      </div>
+    </div>
+  </div>
+  <div class="payment-overlay" id="paymentOverlay">
+  <div class="payment-modal">
+
+    <div class="payment-header">
+      <h3>Secure Payment</h3>
+      <span class="close-btn" onclick="closePayment()">✕</span>
+    </div>
+
+    <div class="amount"></div>
+
+    <label class="method">
+      <input type="radio" name="pay" checked>
+      UPI
+    </label>
+
+    <label class="method">
+      <input type="radio" name="pay">
+      Credit / Debit Card
+    </label>
+
+    <label class="method">
+      <input type="radio" name="pay">
+      Wallet
+    </label>
+
+    <button class="pay-btn" onclick="processPayment()">Pay Now</button>
+
+    <div class="loader" id="loader">Processing payment...</div>
+
+  </div>
+</div>
+
+<div class="success-card">
+    <div class="icon">🎉</div>
+    <h1>OTP Verified!</h1>
+    <div class="store-name">Aditya Kirana Store</div>
+    
+    <p class="welcome">Welcome! Your phone number is now verified.<br>
+    Add your delivery address to start shopping fresh groceries at your doorstep.</p>
+    
+  <button class="btn" onclick="addressPage()"> Add Delivery Address Now </button>
+
+    <div class="footer">
+      Aditya Kirana Store • Your Local Store, Now Online
+    </div>
+  </div>
+</body>
+<script src="states.js"></script>
+<script src="checkout.js"></script>
+
+</html>

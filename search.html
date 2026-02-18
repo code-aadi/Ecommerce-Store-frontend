@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<style>
+  
+
+
+</style>
+<body>
+    <div id="loader"><div class="spinner"></div></div>
+    <header id="header">
+        <nav>
+
+            <div class="start">
+                <a href="index.html" class="home">HOME</a>
+                <div class="kirana">Kirana Store</div>
+                <div class="verticalline"></div>
+                <div class="deliver"><img class="man" src="location.png"
+                        alt=""><span class="user-address"></span> <img class="arrow"
+                        src="keyboard_arrow_down_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
+                <div class="verticalline"></div>
+            </div>
+            <div class="end">
+                <div class="call"><img src="person_30dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""> Call:
+                    +91-123456789
+                </div>
+                <div class="call2"><img src="person_30dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""> Call Us</div>
+                <div class="login">Login</div>
+            </div>
+
+        </nav>
+
+    </header>
+    <section class="top">
+        <li class="menu"><img class="dots" src="menu_30dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""><img class="man man2"
+                src="location.png" alt=""><span class="user-address"></span> <img class="arrow"
+                src="keyboard_arrow_down_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""></li>
+        <ul class="header">
+            <li class="logo"><img src="adityalogo-removebg-preview.png" alt=""></li>
+            <span class="flex">
+                <li class="shop">Shop by Category <span><img
+                            src="keyboard_arrow_down_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""></span><div class="drop-down">
+  <!-- dropdown jo js se load ho raha hai -->
+</div></li>
+                <li class="home2">Home</li>
+                <li class="deals">Deals</li>
+                <li class="arrivals">New Arrivals</li>
+            </span>
+            <li class="search">
+                <form action="search" method="get">
+                    <input type="search" name="search" id="search" placeholder="Search our products"><img
+                        src="search_27dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="">
+
+                </form>
+            </li>
+            <a href="cart.html" class="troly"><img src="troly.jpg" alt=""><span class="cart-amount"></span></a>
+        </ul>
+    </section>
+    <div class="overlay"></div>
+<section class="left-sidebar">
+<!-- iske andar side bar hai jise js se load kara rhe hai -->
+</section>
+    <div class="search-text">
+    <h3 class="search-result"></h3>
+    <button class="clear-result">Clear</button>
+    </div>
+   <div id= "products">
+
+   </div> 
+    <div class="box">
+  <h3 class="box-top">Specify Your Location</h3>
+  <span class="remove-btn">&times;</span>
+  <p class="box-text">Where do you want us to Deliver?</p>
+  <div class="location-area"><button class="current-location"> <img src="location.png" alt=""><span class="btn-text">Current Location</span></button>
+  
+  <input type="text" class="location" placeholder="Search locality or street name" spellcheck="false">
+ 
+  
+  <button class="confirm">Confirm</button>
+  </div>
+   <ul id="suggestions"></ul>
+  <div class="box-line"></div>
+  <button class="skip">Skip For Now</button>
+  <p class="last-text">Note: Product availability, prices, and delivery options will vary based on the delivery location!</p>
+</div>
+   <script src="products.js"></script>
+   <script src="search.js"></script>
+   <script src="cart.js"></script>
+   <script src="search2.js"></script>
+   <script src="location.js"></script>
+   
+</body>
+</html>
