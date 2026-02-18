@@ -1,5 +1,5 @@
 # 🛒 E-Commerce Website (Vanilla JS)
-`[🚀 Live Demo Link](aditya-grocery-store.netlify.app)`
+[🚀 Live Demo Link](https://aditya-grocery-store.netlify.app)
 
 This is a comprehensive web development project featuring a multi-page e-commerce website built entirely with vanilla JavaScript.
 
@@ -16,13 +16,13 @@ This is a comprehensive web development project featuring a multi-page e-commerc
 
 ## 📸 Screenshots
 
-| Home Page | Product List |
+| Home Page | Shopping Cart |
 | :---: | :---: |
 | ![Preview 1](./screenshots/preview1.png) | ![Preview 2](./screenshots/preview2.png) |
 
-| Shopping Cart | Responsive View |
+| Product Detail | Payment (dummy) |
 | :---: | :---: |
-| ![Preview 3](./screenshots/preview3.png) | ![Preview 4](./screenshots/preview4.png) |
+| ![Preview 3](./screenshots/preview3.png) | ![Preview 4](./screenshots/preview5.png) |
 
 ## ⚙️ How to run locally
 
