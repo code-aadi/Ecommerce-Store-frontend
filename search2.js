@@ -62,8 +62,8 @@ let sideBar = document.querySelector(".left-sidebar")
 if(sideBar){
 
     sideBar.innerHTML = `<div class="sidebar">
-    <div class="sidelogo"><img src="adityalogo-removebg-preview.png" alt=""></div>
-    <h4 class="sidetext side-cat"><span class="top-cat">Categories</span><img src="chevron-direction-right-icon.svg" alt=""></h4>
+    <div class="sidelogo"><img src="Images/adityalogo-removebg-preview.png" alt=""></div>
+    <h4 class="sidetext side-cat"><span class="top-cat">Categories</span><img src="Images/chevron-direction-right-icon.svg" alt=""></h4>
     <div class="category-box2">
     <a class="cat2" href="category.html?cat=aata-food">Aata & Food</a>
     <a class="cat2" href="category.html?cat=cold-drinks">Cold Drinks</a>

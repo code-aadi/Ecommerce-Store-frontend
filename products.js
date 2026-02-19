@@ -7,7 +7,7 @@ const products = [
     name: "Aashirvaad Aata",
     price: 106,
     quantity: "2kg",
-    image: "aata.jpg",
+    image: "Images/aata.jpg",
     category: "aata-food",
     mrp: 130
   },
@@ -16,7 +16,7 @@ const products = [
     name: "Organic Tattva Besan",
     quantity: "500gm",
     price: 120,
-    image: "besan.jpg",
+    image: "Images/besan.jpg",
     category: "aata-food",
         mrp: 135
   },
@@ -25,7 +25,7 @@ const products = [
     name: "Aashirvaad Sooji Rava",
     price: 60,
     quantity: "1kg",
-    image: "soojirava.jpg",
+    image: "Images/soojirava.jpg",
     category: "aata-food",
         mrp: 80
 
@@ -34,7 +34,7 @@ const products = [
     id: 4,
     name: "Anil Maida Flour",
     price: 40,
-    image: "maida.jpg",
+    image: "Images/maida.jpg",
     quantity: "500 gm",
     category: "aata-food",
         mrp: 55
@@ -44,7 +44,7 @@ const products = [
     name: "Unity Basmati Rice",
     price: 136,
     quantity: "1kg",
-    image: "basmatiRice.jpg",
+    image: "Images/basmatiRice.jpg",
     category: "aata-food",
         mrp: 150
 
@@ -54,7 +54,7 @@ const products = [
   name: "Sting Energy Drink",
   price: 19,
   quantity: "250 ml",
-  image: "string.jpg",
+  image: "Images/string.jpg",
   category:"cold-drinks",
       mrp: 23
 
@@ -64,7 +64,7 @@ const products = [
   name: "Red Bull Energy Drink",
   price: 121,
   quantity: "250 ml",
-  image: "redbull.jpg",
+  image: "Images/redbull.jpg",
   category:"cold-drinks",
       mrp: 130
 
@@ -74,7 +74,7 @@ const products = [
   name: "Frooti Mango Drink",
   price: 33,
   quantity: "600 ml",
-  image: "frooti.jpg",
+  image: "Images/frooti.jpg",
   category:"cold-drinks",
       mrp: 42
 
@@ -84,7 +84,7 @@ const products = [
   name: "Bailley Drinking Water",
   price: 9,
   quantity: "1 Ltr",
-  image: "water.jpg",
+  image: "Images/water.jpg",
   category:"cold-drinks",
       mrp: 12
 
@@ -94,7 +94,7 @@ const products = [
   name: "Sprite Drink",
   price: 96,
   quantity: "2.25 Ltr",
-  image: "sprite.jpg",
+  image: "Images/sprite.jpg",
   category:"cold-drinks",
       mrp: 105
 
@@ -104,7 +104,7 @@ const products = [
   name: "Thillai's Biryani Masala",
   price: 30,
   quantity: "50 gm",
-  image: "biryani.jpg",
+  image: "Images/biryani.jpg",
   category:"masala-spices",
       mrp: 40
 
@@ -114,7 +114,7 @@ const products = [
   name: "Thillai's Curry Masala",
   price: 25,
   quantity: "50 gm",
-  image: "curry.jpg",
+  image: "Images/curry.jpg",
   category:"masala-spices",
       mrp: 32
 
@@ -124,7 +124,7 @@ const products = [
   name: "Everest Chaat Masala",
   price: 80,
   quantity: "100 gm",
-  image: "everest.jpg",
+  image: "Images/everest.jpg",
   category:"masala-spices",
       mrp: 90
 
@@ -134,7 +134,7 @@ const products = [
   name: "Everest Garam Masala",
   price: 100,
   quantity: "100 gm",
-  image: "garam.jpg",
+  image: "Images/garam.jpg",
   category:"masala-spices",
       mrp: 120
 
@@ -144,7 +144,7 @@ const products = [
   name: "Aachi Chana Masala",
   price: 30,
   quantity: "50 gm",
-  image: "chana.jpg",
+  image: "Images/chana.jpg",
   category:"masala-spices",
       mrp: 40
 
@@ -154,7 +154,7 @@ const products = [
   name: "Everest Sambhar Masala",
   price: 76,
   quantity: "100 gm",
-  image: "sambhar.jpg",
+  image: "Images/sambhar.jpg",
   category:"masala-spices",
       mrp: 80
 
@@ -164,7 +164,7 @@ const products = [
   name: "Saffola Gold Oil Can",
   price: 1057,
   quantity: "5 Ltr",
-  image: "saffola.jpg",
+  image: "Images/saffola.jpg",
   category:"soyabean-oil",
       mrp: 1200
 
@@ -174,7 +174,7 @@ const products = [
   name: "Fortune Groundnut Oil Pouch",
   price: 155,
   quantity: "1 Ltr",
-  image: "fortune.jpg",
+  image: "Images/fortune.jpg",
   category:"soyabean-oil",
   mrp: 176
   },
@@ -183,7 +183,7 @@ const products = [
   name: "Harina Groundnut Oil Can",
   price: 955,
   quantity: "5 Ltr",
-  image: "harina.jpg",
+  image: "Images/harina.jpg",
   category:"soyabean-oil",
       mrp: 1000
 
@@ -193,7 +193,7 @@ const products = [
   name: "Fortune Rice Bran Oil",
   price: 165,
   quantity: "1 Ltr",
-  image: "richbrain.jpg",
+  image: "Images/richbrain.jpg",
   category:"soyabean-oil",
       mrp: 175
 
@@ -203,7 +203,7 @@ const products = [
   name: "Dhathri Hair Care Herbal Oil",
   price: 182,
   quantity: "100 ml",
-  image: "hair1.jpg",
+  image: "Images/hair1.jpg",
   category:"hair-care",
       mrp: 200
 
@@ -213,7 +213,7 @@ const products = [
   name: "Aswini Hair Oil",
   price: 385,
   quantity: "400 ml",
-  image: "hair2.jpg",
+  image: "Images/hair2.jpg",
   category:"hair-care",
       mrp: 400
 
@@ -223,7 +223,7 @@ const products = [
   name: "Dabur Amla Hair Oil",
   price: 49,
   quantity: "90 ml",
-  image: "hair3.jpg",
+  image: "Images/hair3.jpg",
   category:"hair-care",
       mrp: 55
 
@@ -233,7 +233,7 @@ const products = [
   name: "Keya Chai Masala",
   price: 130,
   quantity: "60 gm",
-  image: "chai1.jpg",
+  image: "Images/chai1.jpg",
   category:"chai-coffee",
       mrp: 150
 
@@ -243,7 +243,7 @@ const products = [
   name: "Bru Gold Coffee",
   price: 85,
   quantity: "25 gm",
-  image: "chai2.jpg",
+  image: "Images/chai2.jpg",
   category:"chai-coffee",
       mrp: 90
 
@@ -253,7 +253,7 @@ const products = [
   name: "Nescafe Gold Coffee",
   price: 1406,
   quantity: "200 gm",
-  image: "chai3.jpg",
+  image: "Images/chai3.jpg",
   category:"chai-coffee",
       mrp: 1500
 
@@ -263,7 +263,7 @@ const products = [
   name: "Nescafe Classic Coffee Jar",
   price: 122,
   quantity: "25 gm",
-  image: "chai4.jpg",
+  image: "Images/chai4.jpg",
   category:"chai-coffee",
       mrp: 130
 
@@ -273,7 +273,7 @@ const products = [
   name: "Aashirvaad Iodised Salt",
   price: 27,
   quantity: "1 kg",
-  image: "salt1.jpg",
+  image: "Images/salt1.jpg",
   category:"salt-sugar",
       mrp: 30
 
@@ -283,7 +283,7 @@ const products = [
   name: "Tata Salt Lite",
   price: 48,
   quantity: "1 kg",
-  image: "salt2.jpg",
+  image: "Images/salt2.jpg",
   category:"salt-sugar",
       mrp: 55
 
@@ -293,7 +293,7 @@ const products = [
   name: "Natchiyar Sugar",
   price: 225,
   quantity: "5 kg",
-  image: "sugar1.jpg",
+  image: "Images/sugar1.jpg",
   category:"salt-sugar",
       mrp: 250
 
@@ -303,7 +303,7 @@ const products = [
   name: "Diamond Sugar",
   price: 50,
   quantity: "500 gm",
-  image: "sugar2.jpg",
+  image: "Images/sugar2.jpg",
   category:"salt-sugar",
       mrp: 65
 
@@ -313,7 +313,7 @@ const products = [
   name: "Asal Half Cooked Chapathi",
   price: 45,
   quantity: "200 gm",
-  image: "instant1.jpg",
+  image: "Images/instant1.jpg",
   category:"instant-food",
       mrp: 50
 
@@ -323,7 +323,7 @@ const products = [
   name: "Snac Atac Lentil Twister",
   price: 64,
   quantity: "90 gm",
-  image: "instant2.jpg",
+  image: "Images/instant2.jpg",
   category:"instant-food",
       mrp: 70
 
@@ -333,7 +333,7 @@ const products = [
   name: "Maggi Oats Noodles",
   price: 115,
   quantity: "292 gm",
-  image: "instant3.jpg",
+  image: "Images/instant3.jpg",
   category:"instant-food",
       mrp: 120
 
@@ -343,7 +343,7 @@ const products = [
   name: "Dabur Red Tooth Paste",
   price: 9,
   quantity: "20 gm",
-  image: "oral1.jpg",
+  image: "Images/oral1.jpg",
   category:"oral-care",
       mrp: 11
 
@@ -353,7 +353,7 @@ const products = [
   name: "Colgate Cibaca Tooth Brush",
   price: 14,
   quantity: "1 pc",
-  image: "oral2.jpg",
+  image: "Images/oral2.jpg",
   category:"oral-care",
       mrp: 18
 
@@ -363,7 +363,7 @@ const products = [
   name: "Cold-Cold Coffee",
   price: 220,
   quantity: "250 gm",
-  image: "drinks1.webp",
+  image: "Images/drinks1.webp",
   category: "chai-coffee",
       mrp: 250
 
@@ -373,7 +373,7 @@ const products = [
   name: "Saanchi Ghee",
   price: 220,
   quantity: "250 gm",
-  image: "dairy1.webp",
+  image: "Images/dairy1.webp",
   category: "dairy-products",
       mrp: 250
 
@@ -383,7 +383,7 @@ const products = [
   name: "Amul Ghee",
   price: 180,
   quantity: "250 gm",
-  image: "dairy2.webp",
+  image: "Images/dairy2.webp",
   category: "dairy-products",
       mrp: 200
 
@@ -393,7 +393,7 @@ const products = [
   name: "Britannia Dairy Whitener Powder",
   price: 171,
   quantity: "400 gm",
-  image: "britania.jpg",
+  image: "Images/britania.jpg",
   category: "dairy-products",
       mrp: 180
 
@@ -403,7 +403,7 @@ const products = [
   name: "Amul Butter",
   price: 56,
   quantity: "100 gm",
-  image: "dairy4.webp",
+  image: "Images/dairy4.webp",
   category: "dairy-products",
       mrp: 60
 
@@ -413,7 +413,7 @@ const products = [
   name: "Dairy Day Chocolate Tub",
   price: 186,
   quantity: "900 ml",
-  image: "dairy-choco.jpg",
+  image: "Images/dairy-choco.jpg",
   category: "dairy-products",
       mrp: 210
 
@@ -423,7 +423,7 @@ const products = [
   name: "Amul Cheese Spread",
   price: 110,
   quantity: "200 gm",
-  image: "amul.jpg",
+  image: "Images/amul.jpg",
   category: "dairy-products",
       mrp: 114
 
