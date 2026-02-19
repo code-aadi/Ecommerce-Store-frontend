@@ -28,7 +28,7 @@ This is a comprehensive web development project featuring a multi-page e-commerc
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone [https://github.com/code-aadi/Ecommerce-Store-frontend.git](https://github.com/code-aadi/Ecommerce-Store-frontend.git)
+   git clone https://github.com/code-aadi/Ecommerce-Store-frontend.git
 
 
 2. Navigate to the project folder:  
